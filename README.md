@@ -1,6 +1,6 @@
-# EventHub1 - Student Event Platform
+# EventHub2025 - Student Event Platform
 
-> Complete EventHub application with backend API and frontend interface
+> Complete EventHub application with backend API and frontend interface - 2025 Edition
 
 ## Project info
 
