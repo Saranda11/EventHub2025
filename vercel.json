@@ -1,26 +1,21 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "front/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    },
-    {
-      "src": "backend/api/index.ts",
-      "use": "@vercel/node"
+  "buildCommand": "cd front && npm run build",
+  "outputDirectory": "front/dist",
+  "functions": {
+    "backend/api/index.ts": {
+      "runtime": "@vercel/node"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "backend/api/index.ts"
-    },
+      "dest": "/backend/api/index.ts"
+    }
+  ],
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "front/dist/$1"
+      "source": "/((?!api/.*).*)",
+      "destination": "/index.html"
     }
   ]
 } 
