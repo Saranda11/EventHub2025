@@ -1,4 +1,6 @@
-# Welcome to your  project
+# EventHub1 - Student Event Platform
+
+> Complete EventHub application with backend API and frontend interface
 
 ## Project info
 
