@@ -30,16 +30,17 @@ const Features = () => {
       description: "Ndërto rrjetin tënd të kontakteve, njohu me studentë të tjerë dhe bashkohu me komunitete me interesa të përbashkëta.",
       color: "bg-green-50 text-green-600"
     },
-    {
-      icon: <Award className="w-6 h-6" />,
-      title: "Rezervo Bileta për Evente",
-      description: "Siguro vendin tënd në evente me rezervim të biletave dixhitale të përshtatura për lehtësirat e studentëve.",
-      color: "bg-orange-50 text-orange-600"
-    },
+  {
+  icon: <Award className="w-6 h-6" />,
+  title: "Mbështetje dhe Kontakt",
+  description: "Për çdo pyetje apo paqartësi, mund të na dërgoni mesazh përmes formularit të kontaktit në platformë.",
+  color: "bg-orange-50 text-orange-600"
+},
+
     {
       icon: <Bell className="w-6 h-6" />,
       title: "Njoftime në Kohë Reale",
-      description: "Merr njoftime personalizuara për eventet e ardhshme dhe ndryshimet në orare, nëpërmjet emailit ose aplikacionit.",
+      description: "Merr njoftime personalizuara për eventet e ardhshme.",
       color: "bg-red-50 text-red-600"
     },
     {
@@ -56,8 +57,8 @@ const Features = () => {
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Mbështetje Shumëgjuhësore",
-      description: "Platforma disponohet në dy gjuhë, shqip dhe anglisht, për të përmbushur nevojat e të gjithë studentëve në Kosovë.",
+      title: "Gjuhë Shqipe",
+      description: "Platforma ofron mbështetje në gjuhën shqipe, duke e bërë më të lehtë përdorimin për studentët në Kosovë..",
       color: "bg-cyan-50 text-cyan-600"
     }
   ];

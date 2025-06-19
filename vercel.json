@@ -1,6 +1,4 @@
 {
-  "buildCommand": "cd front && npm run build",
-  "outputDirectory": "front/dist",
   "functions": {
     "backend/api/index.ts": {
       "runtime": "@vercel/node"

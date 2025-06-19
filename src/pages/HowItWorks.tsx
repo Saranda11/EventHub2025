@@ -35,20 +35,20 @@ const HowItWorks = () => {
       details: [
         "Përdorni filtrat për të gjetur evente sipas kategorisë, datës ose universitetit",
         "Shikoni evente të rekomanduara bazuar në interesat tuaja",
-        "Ruani eventet që ju interesojnë për t'i parë më vonë",
-        "Ndiqni organizatorët për të marrë njoftime për eventet e tyre të ardhshme"
+        // "Ruani eventet që ju interesojnë për t'i parë më vonë",
+        "Ndiqni organizatorët për të parë eventet e tyre të ardhshme"
       ]
     },
     {
       title: "Regjistrohu për Evente",
-      description: "Rezervoni vendin tuaj në evente me një klikim të thjeshtë dhe merrni bileta dixhitale.",
+      description: "Rezervoni vendin tuaj në evente me një klikim të thjeshtë.",
       icon: <Calendar className="h-6 w-6" />,
       color: "bg-green-50 text-green-600",
       details: [
         "Klikoni butonin 'Regjistrohu' në faqen e eventit",
         "Konfirmoni pjesëmarrjen tuaj dhe plotësoni çdo informacion shtesë të kërkuar",
-        "Merrni biletën dixhitale me kodin QR në email",
-        "Shkarkoni biletën ose ruajeni në Google Wallet/Apple Wallet"
+       , "Nëse nuk mund të merrni pjesë, ju lutemi anuloni regjistrimin për të liruar vendin për pjesëmarrës të tjerë",
+      
       ]
     },
     {
@@ -60,7 +60,7 @@ const HowItWorks = () => {
         "Klikoni 'Krijo Event' në dashboard-in tuaj",
         "Plotësoni të gjitha detajet e nevojshme për eventin tuaj",
         "Shtoni informacione për lokacionin, datën, përshkrimin dhe kategorinë",
-        "Publikoni eventin ose ruajeni si draft për më vonë"
+        "Publikoni eventin"
       ]
     }
   ];
@@ -72,23 +72,23 @@ const HowItWorks = () => {
     },
     {
       question: "A mund të anuloj pjesëmarrjen time në një event?",
-      answer: "Po, mund ta anuloni pjesëmarrjen tuaj në një event deri në 24 orë para fillimit të eventit. Shkoni te 'Eventet e Mia', gjeni eventin përkatës dhe klikoni 'Anulo Pjesëmarrjen'. Nëse eventi ka qenë me pagesë, politika e rimbursimit varet nga rregullat e vendosura nga organizatori."
+      answer: "Po, mund ta anuloni pjesëmarrjen tuaj në një event."
     },
     {
-      question: "Si funksionon sistemi i biletave?",
-      answer: "Pas regjistrimit në një event, do të merrni një biletë dixhitale me një kod unik QR në emailin tuaj. Kjo biletë mund të printohet ose të ruhet në telefonin tuaj. Në ditën e eventit, organizatori do të skanojë kodin QR për të konfirmuar pjesëmarrjen tuaj."
+      question: "A mund të marr certifikatë pjesëmarrjeje në një event?",
+      answer: "Po, disa organizatorë eventesh ofrojnë certifikata pjesëmarrjeje."
     },
     {
-      question: "A mund të krijoj evente private?",
-      answer: "Po, platforma jonë mbështet krijimin e eventeve private që janë të dukshme vetëm për personat që ju ftoni. Kur krijoni një event, mund të zgjidhni opsionin 'Event Privat' dhe të shtoni emailet e personave që dëshironi të ftoni."
+      question: "Si mund të gjej eventet që më interesojnë?",
+      answer: "EventHub ofron filtra të avancuar për kërkim, përfshirë kategoritë (akademik, kulturor, social), vendndodhjen, datën. Mund të përdorni edhe fjalë kyçe për të kërkuar evente specifike."
     },
     {
       question: "Si mund të promovoj eventin tim?",
       answer: "EventHub ofron disa mjete për promovimin e eventeve. Mund të përdorni opsionin 'Ndaj në Rrjete Sociale' për të shpërndarë eventin tuaj në platforma si Facebook, Instagram ose LinkedIn. Gjithashtu, eventet me cilësi të lartë mund të zgjidhen për t'u shfaqur në seksionin 'Të Rekomanduara' në faqen kryesore."
     },
     {
-      question: "A mund të përdor EventHub për evente të paguara?",
-      answer: "Po, EventHub mbështet eventet me bileta të paguara. Si organizator, mund të vendosni çmimin e biletave dhe të zgjidhni metodat e pagesës. Platforma mban një komision të vogël për çdo biletë të shitur, dhe fondet transferohen në llogarinë tuaj pas përfundimit të eventit."
+      question: "Si mund të rris pjesëmarrjen në eventin tim?",
+      answer: "Për të rritur pjesëmarrjen, sigurohuni që përshkrimi i eventit të jetë tërheqës dhe i qartë. Përdorni imazhe cilësore, ndani eventin në rrjete sociale dhe ftoni drejtpërdrejt pjesëmarrës përmes emailit. ."
     }
   ];
 
@@ -146,7 +146,7 @@ const HowItWorks = () => {
           </div>
           
           {/* Mobile App Section */}
-          <div className="mb-20">
+          {/* <div className="mb-20">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-3xl font-semibold mb-6">EventHub në telefonin tuaj</h2>
@@ -202,7 +202,7 @@ const HowItWorks = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
           
           {/* FAQ Section */}
           <div className="mb-20">

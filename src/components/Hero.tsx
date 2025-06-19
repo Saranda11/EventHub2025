@@ -113,10 +113,10 @@ const Hero = () => {
                   <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
                     <Calendar className="w-5 h-5 text-primary" />
                   </div>
-                  <div>
+                  {/* <div>
                     <p className="text-sm font-medium">Eventi i ardhshëm</p>
                     <p className="text-xs text-foreground/70">FrontEnd Development • 15 Nëntor</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               

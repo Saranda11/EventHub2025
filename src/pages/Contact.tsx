@@ -11,6 +11,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { messageApi } from "@/lib/api";
 import {
   Form,
   FormControl,
@@ -59,10 +60,15 @@ const Contact = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      console.log(values);
-      setIsSubmitting(false);
+    try {
+      await messageApi.sendMessage({
+        name: values.name,
+        email: values.email,
+        subject: values.subject,
+        message: values.message,
+        department: values.department as "general" | "technical" | "partnerships" | "careers",
+      });
+      
       setIsSuccess(true);
       
       toast({
@@ -75,7 +81,15 @@ const Contact = () => {
       setTimeout(() => {
         setIsSuccess(false);
       }, 3000);
-    }, 1500);
+    } catch (error) {
+      toast({
+        title: "Gabim në dërgimin e mesazhit",
+        description: "Ju lutemi provoni përsëri më vonë.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -105,7 +119,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-lg mb-1">Adresa jonë</h3>
-                      <p className="text-foreground/70"> <br />Mitrovicë 40000, Kosovë</p>
+                      <p className="text-foreground/70">Mitrovicë 40000, Kosovë</p>
                     </div>
                   </div>
                   
@@ -115,7 +129,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-lg mb-1">Email</h3>
-                      <p className="text-foreground/70">info@eventhub.com<br />support@eventhub.com</p>
+                      <p className="text-foreground/70">eventhubb2025@gmail.com</p>
                     </div>
                   </div>
                   
@@ -125,7 +139,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-lg mb-1">Telefoni</h3>
-                      <p className="text-foreground/70"><br /></p>
+                      <p className="text-foreground/70">+383 45 000 000</p>
                     </div>
                   </div>
                   
@@ -322,14 +336,14 @@ const Contact = () => {
               </div>
               
               <div>
-                <h3 className="font-medium text-lg mb-2 flex items-center gap-2">
+                {/* <h3 className="font-medium text-lg mb-2 flex items-center gap-2">
                   <span className="bg-primary/20 text-primary w-6 h-6 inline-flex items-center justify-center rounded-full text-sm font-bold">3</span>
                   Si mund të bëhem partner me EventHub?
                 </h3>
                 <p className="text-foreground/70 pl-8">
                   Për mundësi partneriteti, ju lutemi zgjidhni "Partneritete" në formularin e kontaktit ose na dërgoni një email direkt 
                   në partnerships@eventhub.com me detaje për organizatën tuaj dhe llojin e bashkëpunimit që kërkoni.
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

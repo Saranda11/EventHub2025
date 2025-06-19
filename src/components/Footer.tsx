@@ -59,11 +59,11 @@ const Footer = () => {
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-primary" />
-                <a href="mailto:info@eventhub.com" className="hover:text-primary transition-colors">info@eventhub.com</a>
+                <a href="mailto:info@eventhub.com" className="hover:text-primary transition-colors">eventhubb2025@gmail.com</a>
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary" />
-                <a href="tel:+38344123456" className="hover:text-primary transition-colors"></a>
+                <a href="tel:+38344123456" className="hover:text-primary transition-colors">+383 45 000 000</a>
               </p>
             </div>
           </div>
@@ -73,13 +73,13 @@ const Footer = () => {
           <p className="text-foreground/60 text-sm">
             © {currentYear} EventHub - Platforma për Menaxhimin e Eventeve të Studentëve në Kosovë
           </p>
-          <div className="mt-4 flex justify-center space-x-4 text-sm text-foreground/60">
+          {/* <div className="mt-4 flex justify-center space-x-4 text-sm text-foreground/60">
             <Link to="/privacy-policy" className="hover:text-primary transition-colors">Politika e Privatësisë</Link>
             <span>•</span>
             <Link to="/terms" className="hover:text-primary transition-colors">Kushtet e Përdorimit</Link>
             <span>•</span>
             <Link to="/cookies" className="hover:text-primary transition-colors">Politika e Cookies</Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
