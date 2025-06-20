@@ -1,6 +1,21 @@
-# EventHub1 - Student Event Platform
+# EventHub - Student Event Management Platform
 
-> Complete EventHub application with backend API and frontend interface
+A comprehensive event management platform designed for students to discover, create, and manage events.
+
+## Features
+
+- Event browsing and search
+- User authentication and profiles
+- Event creation and management
+- Event registration system
+- Mobile-responsive design
+
+## Deployment Status
+- ✅ Backend: Live on Render
+- ✅ Frontend: Live on Vercel  
+- ✅ Database: MongoDB Atlas
+
+<!-- Deployment trigger comment -->
 
 ## Project info
 
