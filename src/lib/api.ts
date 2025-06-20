@@ -1,7 +1,7 @@
 import { toast } from "sonner";
 
-// Base API URL - can be moved to environment variables
-const API_URL = "http://localhost:5000/api";
+// Base API URL - environment variable or fallback to localhost
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 // Types
 export interface LoginCredentials {
