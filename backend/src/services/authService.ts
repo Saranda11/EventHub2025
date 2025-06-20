@@ -125,7 +125,7 @@ export class AuthService {
         console.log(`✅ [TOKEN] Welcome email sent successfully to ${user.email}`);
       } catch (emailError) {
         console.error("❌ [TOKEN] Failed to send welcome email:", emailError);
-        console.error("❌ [TOKEN] Error details:", emailError.message);
+        console.error("❌ [TOKEN] Error details:", emailError instanceof Error ? emailError.message : String(emailError));
         // Don't throw error here, verification was successful
       }
     }
@@ -162,7 +162,7 @@ export class AuthService {
         console.log(`✅ [CODE] Welcome email sent successfully to ${user.email}`);
       } catch (emailError) {
         console.error("❌ [CODE] Failed to send welcome email:", emailError);
-        console.error("❌ [CODE] Error details:", emailError.message);
+        console.error("❌ [CODE] Error details:", emailError instanceof Error ? emailError.message : String(emailError));
         // Don't throw error here, verification was successful
       }
     }
