@@ -10,7 +10,8 @@
     "seed": "ts-node src/utils/seedEvents.ts",
     "clear": "ts-node src/utils/clearEvents.ts",
     "lint": "eslint . --ext .ts",
-    "test": "jest"
+    "test": "jest",
+    "vercel-build": "tsc"
   },
   "keywords": [
     "express",

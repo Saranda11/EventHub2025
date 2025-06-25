@@ -1,6 +1,6 @@
 import { toast } from "sonner";
 
-// Base API URL - environment variable or fallback to localhost
+// Base API URL - will use environment variable from Vercel
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 // Types
