@@ -1,7 +1,7 @@
 import { toast } from "sonner";
 
-// Base API URL - will use environment variable from Vercel
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+// Base API URL - will use environment variable from Vercel, or Render backend for production
+const API_URL = import.meta.env.VITE_API_URL || "https://eventhub-backend-5n7l.onrender.com/api";
 
 // Types
 export interface LoginCredentials {
